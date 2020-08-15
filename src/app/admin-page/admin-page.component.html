@@ -1,0 +1,32 @@
+<app-admin-nav-bar></app-admin-nav-bar>
+<div>
+    <h5 style="text-align: center;">Management of Complaints by Admin</h5>
+    <!-- <table class="table"> -->
+    <table class="container">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Complaint Details</th>
+                <th scope="col">Complaint Status</th>
+                <th scope="col">Edit Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 
+            <tr *ngFor="let data of datas; let i = index" (click)="selectedRow=i;getSupplier(data.id)">
+                //code
+            </tr> -->
+            <tr *ngFor="let product of this.cropModel; let index = index">
+                <td scope="row">{{product['id']}}</td>
+                <td>{{product['complaint_details']}}</td>
+                <td>{{product['complaint_status']}}</td>
+                <td><button type="button" (click)=" selectedRow=index;changeStatus(product)" class="glyphicon glyphicon-check"></button>
+                </td>
+                <!-- <td><button (click)="changeStatus(item)"></button></td> -->
+
+            </tr>
+
+        </tbody>
+    </table>
+    <br><br><br>
+</div>

@@ -1,0 +1,55 @@
+<app-buyer-nav-bar></app-buyer-nav-bar>
+
+
+<div>
+    <table class="container" style="margin-left: 10px; margin-right: 10px;">
+        <tr>
+            <th scope="col">Supplier Name</th>
+            <td>{{this.usersData[0].username}}</td>
+        </tr>
+
+
+        <tr>
+            <th scope="col">Supplier Email</th>
+            <!-- <td>{{this.usersData[0].email}}</td> -->
+
+            <td><a href="mailto:{{this.usersData[0].email}}">{{this.usersData[0].email}}</a></td>
+        </tr>
+
+        <tr>
+            <th scope="col">Supplier Mobile No.</th>
+            <!-- <td>{{this.usersData[0].mobile}}</td>
+             -->
+            <td> <a href="tel:{{this.usersData[0].mobile}}">{{this.usersData[0].mobile}}</a></td>
+        </tr>
+        <tr>
+            <th scope="col">Crop Id</th>
+            <td>{{this.cropsData[0].id}}</td>
+        </tr>
+        <tr>
+            <th scope="col">Crop Name</th>
+            <td>{{this.cropsData[0].crop_name}}</td>
+        </tr>
+        <tr>
+            <th scope="col">Crop Type</th>
+            <td>{{this.cropsData[0].crop_type}}</td>
+        </tr>
+        <tr>
+            <th scope="col">Crop Quantity</th>
+            <td>{{this.cropsData[0].crop_quantity}}</td>
+        </tr>
+        <tr>
+            <th scope="col">Crop Price</th>
+            <td>{{this.cropsData[0].crop_price}}</td>
+        </tr>
+        <tr>
+            <th scope="col">Crop Image</th>
+            <td><img style="width: 250px; height: 80px;" src="{{this.cropsData[0]['crop_image_url']}}" alt="Photo of a Rice">
+            </td>
+        </tr>
+
+
+
+    </table>
+    <br><br><br>
+</div>

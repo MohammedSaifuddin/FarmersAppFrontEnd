@@ -1,0 +1,41 @@
+<app-buyer-nav-bar></app-buyer-nav-bar>
+
+<div class="tp-container">
+    <form class="example-form" (ngSubmit)="upload()">
+        <mat-card-header>
+            <mat-card-title>Required Crop Details </mat-card-title>
+        </mat-card-header>
+        <mat-form-field class="example-full-width">
+            <mat-label>Crop Name</mat-label>
+            <input matInput placeholder="Enter Crop Name" [(ngModel)]="cropModel.crop_name" name="crop_name">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Crop Type</mat-label>
+            <textarea matInput placeholder="Enter Crop Type" [(ngModel)]="cropModel.crop_type" name="crop_type"></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Crop Quantity</mat-label>
+            <textarea matInput placeholder="Enter Crop Quantity" [(ngModel)]="cropModel.crop_quantity" name="crop_quantity"></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Crop Price</mat-label>
+            <textarea matInput placeholder="Enter Crop Price" [(ngModel)]="cropModel.crop_price" name="crop_price"></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Crop Quantity Unit </mat-label>
+            <input matInput placeholder="Enter Crop Quantity Unit" value="Kg" [(ngModel)]="cropModel.crop_unit_type" name="crop_unit_type">
+        </mat-form-field>
+
+        <label class="btn btn-default"> <input type="file"
+          (change)="selectFile($event)">
+        </label>
+        <br>
+        <button mat-stroked-button color="accent" [disabled]="!selectedFiles" type="submit" class="btn-block">Add Crop</button>
+
+
+    </form>
+</div>

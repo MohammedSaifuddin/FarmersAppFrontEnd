@@ -1,0 +1,20 @@
+<app-admin-nav-bar></app-admin-nav-bar>
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Post Tips</mat-card-title>
+        </mat-card-header>
+
+        <form (ngSubmit)="sendFormData()" style="padding-right: 20px ;">
+
+            <textarea cols="50" rows="5" style="border:solid 1px orange; width: 100%;" matInput placeholder="Farming Tip" [(ngModel)]="farmingTip.farming_tip" name="farming_tip">
+                    </textarea>
+
+
+
+            <button mat-stroked-button color="primary" type="submit" class="btn-block">Submit Tip</button>
+
+        </form>
+    </mat-card>
+</div>

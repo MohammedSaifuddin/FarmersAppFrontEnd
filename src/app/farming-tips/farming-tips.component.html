@@ -1,0 +1,21 @@
+<app-supplier-nav-bar></app-supplier-nav-bar>
+
+
+<div>
+    <table class="container">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Farming Tips</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of this.cropModel; let index = index">
+                <td>{{product['id']}}</td>
+                <td>{{product['farming_tip']}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <br><br><br>
+</div>

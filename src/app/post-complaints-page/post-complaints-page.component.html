@@ -1,0 +1,20 @@
+<app-supplier-nav-bar></app-supplier-nav-bar>
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Post Complaint</mat-card-title>
+        </mat-card-header>
+
+        <form (ngSubmit)="sendFormData()">
+
+            <textarea cols="50" rows="5" style="border:solid 1px orange; width: 100%;" matInput placeholder="Complaint Description" [(ngModel)]="cropModel.complaint_details" name="complaint_details">
+                      </textarea>
+
+
+
+            <button mat-stroked-button color="primary" type="submit" class="btn-block">Submit Complaint</button>
+
+        </form>
+    </mat-card>
+</div>

@@ -1,0 +1,15 @@
+.example-card {
+    max-width: 400px;
+}
+
+.example-header-image {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/farmers-app-b1428.appspot.com/o/overviewbg-res.jpg?alt=media&token=1878a15e-6874-4456-bbbe-b466e5512ccc');
+    background-size: cover;
+}
+
+.center {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f0e68c;
+}

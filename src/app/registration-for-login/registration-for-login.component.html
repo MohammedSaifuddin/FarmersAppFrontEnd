@@ -1,0 +1,57 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+
+            <a class="navbar-brand" href="#" style="font-size: 20px; text-align: center;">Farmer Assistant Web Service</a>
+        </div>
+
+    </div>
+</nav>
+
+<body>
+    <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+        <mat-card class="box">
+            <mat-card-header>
+                <mat-card-title>Register</mat-card-title>
+            </mat-card-header>
+
+            <form class="example-form" (ngSubmit)="getUserData()">
+
+                <mat-card-content>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Username" [(ngModel)]="accountsModel.username" name="username">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Email" [(ngModel)]="accountsModel.email" name="email">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Password" type="password" maxlength="10" [(ngModel)]="accountsModel.password" name="password">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Confirm Password" maxlength="10" type="password" [(ngModel)]="accountsModel.confirm_password" name="confirm_password">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <input maxlength="10" matInput placeholder="Mobile" [(ngModel)]="accountsModel.mobile" name="mobile">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Choose a role...</mat-label>
+                        <mat-select name="role" placeholder="Role" [(ngModel)]="role">
+                            <mat-option value="Buyer">Buyer </mat-option>
+                            <mat-option value="Supplier">Supplier
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-card-content>
+
+                <button mat-stroked-button color="accent" type="submit" class="btn-block">Register</button>
+
+            </form>
+        </mat-card>
+    </div>
+</body>
